@@ -2780,3 +2780,5 @@ You can follow https://x.com/igor_chubin for the updates.
 1990-07-21 13:22:31 - 648566551 - Wetter in 
 1990-11-17 17:59:6 - 658864746 - Wetter in 
 1990-02-07 11:54:9 - 634391649 - Wetter in 
+1990-12-26 14:39:36 - 662222376 - Wetter in berlin: 🌤️  🌡️+17°C 🌬️↖9km/h
+1990-01-03 13:27:24 - 631373244 - Wetter in berlin: 🌤️  🌡️+17°C 🌬️↖9km/h
