@@ -8,7 +8,7 @@ set -e
 
 # Konfiguration
 PROJECT_DIR="$HOME/autocommit"
-TARGET_YEAR="1990"  # Das Jahr, in dem du Commits erstellen möchtest
+TARGET_YEAR="1993"  # Das Jahr, in dem du Commits erstellen möchtest
 CITY="Berlin"       # Stadt für Wetterinformationen
 
 # Wetter einmalig fetchen (vor der Schleife)
