@@ -2163,3 +2163,4 @@ You can follow https://x.com/igor_chubin for the updates.
 1990-04-07 9:39:42 - 639481182 - Wetter in berlin: ☁️   🌡️+4°C 🌬️↗18km/h
 1990-02-25 18:32:6 - 635970726 - Wetter in berlin: ☁️   🌡️+4°C 🌬️↗18km/h
 1990-04-13 10:27:53 - 640002473 - Wetter in berlin: ☁️   🌡️+4°C 🌬️↗18km/h
+1990-02-14 13:32:50 - 635002370 - Wetter in weather data source not available
