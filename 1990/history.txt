@@ -2249,3 +2249,4 @@ You can follow https://x.com/igor_chubin for the updates.
 1990-09-03 15:31:8 - 652375868 - Wetter in berlin: ☀️   🌡️+6°C 🌬️→17km/h
 1990-03-18 11:34:38 - 637760078 - Wetter in berlin: ☀️   🌡️+6°C 🌬️→17km/h
 1990-09-30 11:14:44 - 654693284 - Wetter in berlin: ☀️   🌡️+1°C 🌬️↓7km/h
+1990-04-28 14:21:27 - 641312487 - Wetter in berlin: ☀️   🌡️+1°C 🌬️↓7km/h
