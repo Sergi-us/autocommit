@@ -2008,3 +2008,9 @@
 1990-05-16 17:31:50 - 642879110 - Wetter in berlin: ☁️   🌡️+4°C 🌬️←6km/h
 1990-01-08 12:42:9 - 631802529 - Wetter in berlin: ☁️   🌡️+4°C 🌬️←6km/h
 1990-06-03 11:25:37 - 644412337 - Wetter in berlin: ☁️   🌡️+4°C 🌬️←6km/h
+1990-12-20 11:28:19 - 661692499 - Wetter in 
+Sorry, we are running out of queries to the weather service at the moment.
+Here is the weather report for the default city (just to show you what it looks like).
+We will get new queries as soon as possible.
+You can follow https://x.com/igor_chubin for the updates.
+======================================================================================
