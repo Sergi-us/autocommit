@@ -2170,3 +2170,4 @@ You can follow https://x.com/igor_chubin for the updates.
 1990-09-05 17:4:58 - 652554298 - Wetter in 
 1990-02-11 9:6:57 - 634727217 - Wetter in weather data source not available
 1990-01-19 18:39:15 - 632774355 - Wetter in 
+1990-05-09 11:38:20 - 642253100 - Wetter in render failed: response missing current_condition array
