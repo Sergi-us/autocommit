@@ -5,8 +5,8 @@
 # Erstellt rückwirkende Commits für GitHub-Beitragsgrafik
 
 # Konfiguration
-PROJECT_DIR="$HOME/autocommit"
-TARGET_YEAR="2021"  # Das Jahr, in dem du Commits erstellen möchtest
+PROJECT_DIR="$HOME/.local/src/autocommit"
+TARGET_YEAR="1990"  # Das Jahr, in dem du Commits erstellen möchtest
 CITY="Berlin"       # Stadt für Wetterinformationen
 
 # Generiere eine zufällige Zahl zwischen 0 und 7
