@@ -525,3 +525,4 @@
 1990-04-07 17:31:25 - 639509485 - Wetter in Unknown location; please try ~52.52045,13.40732
 1990-10-24 9:0:28 - 656758828 - Wetter in Unknown location; please try ~52.52045,13.40732
 1990-01-09 15:52:22 - 631900342 - Wetter in Unknown location; please try ~52.52045,13.40732
+1990-05-19 15:27:27 - 643130847 - Wetter in Unknown location; please try ~52.52045,13.40732
