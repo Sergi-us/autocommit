@@ -2143,3 +2143,4 @@ You can follow https://x.com/igor_chubin for the updates.
 1990-03-10 13:18:19 - 637075099 - Wetter in weather fetch failed: failed to make HTTP request: Get "http://127.0.0.1:5001/premium/v1/weather.ashx?key=2b505b8f72ad3b4b2d528d804cb15&q=52.520450,13.407320&format=json&num_of_days=3&includelocation=yes&lang=en": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
 1990-03-05 18:0:32 - 636660032 - Wetter in 
 1990-09-12 13:54:48 - 653147688 - Wetter in render failed: response missing current_condition array
+1990-12-26 9:54:40 - 662205280 - Wetter in weather fetch failed: unexpected status code: 500
