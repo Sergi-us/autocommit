@@ -4,7 +4,7 @@
 # Erstellt tägliche Dateien für Wetterdaten und ordnet sie nach dem Format Jahr-Kalenderwoche-Wochentag
 
 # Konfiguration
-PROJECT_DIR="$HOME/.local/src/autocommit"
+PROJECT_DIR="$HOME/autocommit"
 DAILY_DIR="$PROJECT_DIR/daily"
 CITY="Berlin"       # Stadt für Wetterinformationen
 
