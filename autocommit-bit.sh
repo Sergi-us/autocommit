@@ -6,11 +6,11 @@
 
 # Konfiguration
 PROJECT_DIR="$HOME/autocommit"
-TARGET_YEAR="1991"  # Das Jahr, in dem du Commits erstellen möchtest
+TARGET_YEAR="1990"  # Das Jahr, in dem du Commits erstellen möchtest
 CITY="Berlin"       # Stadt für Wetterinformationen
 
 # Generiere eine zufällige Zahl zwischen 0 und 7
-x=$(shuf -i 1-500 -n 1)
+x=$(shuf -i 1-50 -n 1)
 
 # Bei 0 beenden wir das Skript ohne Commits
 if [ $x = 0 ]; then
