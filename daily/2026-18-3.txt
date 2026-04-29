@@ -1,0 +1,1 @@
+2026-04-29 00:00:01 - 1777420801 - Wetter in weather data source not available
