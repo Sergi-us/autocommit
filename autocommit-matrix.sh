@@ -1,13 +1,15 @@
 #!/bin/sh
 # autocommit-matrix.sh – Commit-Matrix (SARBS) für ein bestimmtes Jahr
 
+set -e
+
 # Konfiguration
-TARGET_YEAR="1990"  # Jahr der Commits
+TARGET_YEAR="1990"
 AUTHOR="AutoCommit <you@example.com>"
 
-# Repo-Verzeichnisse
-REPO_DIR=$(pwd)
-YEAR_DIR="$REPO_DIR/$TARGET_YEAR"
+# Verzeichnisse
+PROJECT_DIR="$HOME/autocommit"
+YEAR_DIR="$PROJECT_DIR/$TARGET_YEAR"
 
 # Matrix 52x7 (SARBS Pixelart)
 MATRIX="
@@ -20,33 +22,33 @@ MATRIX="
 0000000001111000100010010001001111000111100000000000
 "
 
-# Repo initialisieren, falls nicht vorhanden
-[ -d .git ] || git init
+# Repo initialisieren falls nicht vorhanden
+[ -d "$PROJECT_DIR/.git" ] || git -C "$PROJECT_DIR" init
 
 # Startdatum: erster Montag des Jahres
-START=$(date -d "$TARGET_YEAR-01-01" +%u) # 1=Mo .. 7=So
+START=$(date -d "$TARGET_YEAR-01-01" +%u)
 FIRST_MONDAY=$(date -d "$TARGET_YEAR-01-01 +$(( (8-START) % 7 )) days" +%Y-%m-%d)
-
-week=0
-day=0
 
 echo "$MATRIX" | while read -r line; do
     [ -z "$line" ] && continue
+
     week=0
-    for c in $(echo "$line" | sed 's/./& /g'); do
-        [ "$c" = " " ] && continue
-        if [ "$c" != "0" ]; then
-            date=$(date -d "$FIRST_MONDAY +$((week*7+day)) days" +%Y-%m-%d)
-            count=$c
+    for char in $(echo "$line" | sed 's/./& /g'); do
+        [ "$char" = " " ] && continue
+        if [ "$char" != "0" ]; then
+            commit_date=$(date -d "$FIRST_MONDAY +$((week*7+day)) days" +%Y-%m-%d)
+            count="$char"
             i=1
-            while [ $i -le $count ]; do
+            while [ "$i" -le "$count" ]; do
                 file="$YEAR_DIR/week-$week/day-$day-$i.txt"
                 mkdir -p "$(dirname "$file")"
-                echo "$date $i" > "$file"
-                GIT_AUTHOR_DATE="$date 12:00:00" \
-                GIT_COMMITTER_DATE="$date 12:00:00" \
-                git add "$file" && \
-                git commit -m "matrix $date" --author="$AUTHOR"
+                echo "$commit_date $i" > "$file"
+
+                git -C "$PROJECT_DIR" add "$file"
+                GIT_AUTHOR_DATE="$commit_date 12:00:00" \
+                GIT_COMMITTER_DATE="$commit_date 12:00:00" \
+                git -C "$PROJECT_DIR" commit -m "matrix $commit_date" --author="$AUTHOR"
+
                 i=$((i+1))
             done
         fi
@@ -54,3 +56,5 @@ echo "$MATRIX" | while read -r line; do
     done
     day=$((day+1))
 done
+
+echo "Matrix für $TARGET_YEAR erstellt"
