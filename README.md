@@ -11,7 +11,7 @@ Ein vielseitiges Skript-Set für automatische Git-Commits – ideal für GitHub-
 - **autocommit-daily.sh** – Hauptskript: Tägliche Commits mit Wetterdaten, organisiert nach Jahr-Kalenderwoche-Tag
 - **autocommit-bit.sh** (Back In Time) – Generiert rückwirkende Commits für vergangene Jahre
 - **autocommit-matrix.sh** – Commit-Matrix: SARBS Pixelart im GitHub-Beitragsdiagramm
-- **Zufällige Commits** – 0-7 Commits pro Ausführung für natürliches Beitragsdiagramm
+- **Zufällige Commits** – 0-5 (daily) / 0-20 (bit) pro Ausführung für natürliches Beitragsdiagramm
 - **Wetter-Integration** – Aktuelle Wetterdaten via `wttr.in` in jedem Commit
 - **Organisierte Struktur** – Separate Verzeichnisse für einfache Verwaltung und Löschung
 
@@ -152,6 +152,20 @@ crontab -u autocommit -e
 @daily /home/autocommit/autocommit/autocommit-daily.sh
 ```
 
+## 🔧 Admin-Aufgaben (als Root)
+
+Für Git-Befehle als Root den Key explizit angeben:
+
+```bash
+GIT_SSH_COMMAND="ssh -i /home/autocommit/.ssh/id_ed25519_autocommit" git pull
+```
+
+Oder für alle Git-Operationen als Alias:
+
+```bash
+alias gitac='GIT_SSH_COMMAND="ssh -i /home/autocommit/.ssh/id_ed25519_autocommit" git -C /home/autocommit/autocommit'
+```
+
 ## ✅ Testen
 
 Skript manuell ausführen:
@@ -181,9 +195,9 @@ https://github.com/Sergi-us/autocommit/commits
 
 ## 🛠️ Funktionsweise
 
-1. Skript generiert Zufallszahl (0-7)
-2. Bei **0** → kein Commit (natürliche Lücken im Diagramm)
-3. Bei **1-7** → entsprechende Anzahl Commits mit:
+1. **autocommit-daily.sh** – Zufallszahl (0-5), bei 0 keine Commits
+2. **autocommit-bit.sh** – Zufallszahl (0-20), bei 0 keine Commits
+3. Bei >0 → entsprechende Anzahl Commits mit:
    - Unix-Zeitstempel
    - Aktuellen Wetterdaten von `wttr.in`
    - Eintrag in `daily/JJJJ-KW-Tag.txt`

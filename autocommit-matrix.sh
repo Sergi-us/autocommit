@@ -4,7 +4,7 @@
 set -e
 
 # Konfiguration
-TARGET_YEAR="1990"
+TARGET_YEAR="1992"
 AUTHOR="AutoCommit <you@example.com>"
 
 # Verzeichnisse
