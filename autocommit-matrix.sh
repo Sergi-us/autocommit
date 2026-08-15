@@ -4,7 +4,7 @@
 set -e
 
 # Konfiguration
-TARGET_YEAR="1992"
+TARGET_YEAR="2025"
 AUTHOR="AutoCommit <you@example.com>"
 
 # Verzeichnisse
@@ -28,6 +28,8 @@ MATRIX="
 # Startdatum: erster Montag des Jahres
 START=$(date -d "$TARGET_YEAR-01-01" +%u)
 FIRST_MONDAY=$(date -d "$TARGET_YEAR-01-01 +$(( (8-START) % 7 )) days" +%Y-%m-%d)
+
+day=0
 
 echo "$MATRIX" | while read -r line; do
     [ -z "$line" ] && continue

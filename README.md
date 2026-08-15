@@ -172,8 +172,8 @@ chown -R autocommit:autocommit /home/autocommit/autocommit
 ### Git-Identität setzen (als Root)
 
 ```bash
-git -C /home/autocommit/autocommit config user.name "Autocommit"
-git -C /home/autocommit/autocommit config user.email "autocommit@server"
+git -C /home/autocommit/autocommit config user.name "Git Nutzerame"
+git -C /home/autocommit/autocommit config user.email "github@adresse.com"
 chown autocommit:autocommit /home/autocommit/autocommit/.git/config
 ```
 
